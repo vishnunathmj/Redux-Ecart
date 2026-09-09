@@ -31,18 +31,18 @@ function Footer() {
           <div className="footer-links col-lg-2 col-md-3 col-sm-6">
             <h4>Links</h4>
 
-            <a href="/">Home</a><br />
-            <a href="/">Wishlist</a><br />
-            <a href="/">Cart</a><br />
+            <a className='text-light text-decoration-none' href="/">Home</a><br />
+            <a className='text-light text-decoration-none' href="/wishlist">Wishlist</a><br />
+            <a className='text-light text-decoration-none' href="/cart">Cart</a><br />
           </div>
 
           {/* Guides */}
           <div className="footer-links col-lg-2 col-md-3 col-sm-6">
             <h4>Guides</h4>
 
-            <a href="/">Bootstrap</a><br />
-            <a href="/">Redux</a><br />
-            <a href="/">React</a><br />
+            <a target="_blank" className='text-light text-decoration-none' href="https://react-bootstrap.netlify.app/">Bootstrap</a><br />
+            <a target="_blank" className='text-light text-decoration-none' href="https://redux.js.org/">Redux</a><br />
+            <a target="_blank" className='text-light text-decoration-none' href="https://react.dev/">React</a><br />
           </div>
 
           {/* Contact */}
@@ -56,33 +56,33 @@ function Footer() {
                 className="form-control"
               />
 
-              <button type="submit" className="btn">
+              <button variant="light" type="submit" className="btn text-light">
                 <FontAwesomeIcon icon={faArrowRight} />
               </button>
             </form>
 
-            <div className="social-icons d-flex">
-              <a href="/">
+            <div className="social-icons d-flex mt-3">
+              <a target="_blank" className='text-light text-decoration-none ms-3' href="https://www.facebook.com/">
                 <FontAwesomeIcon icon={faFacebookF} />
               </a>
 
-              <a href="/">
+              <a target="_blank" className='text-light text-decoration-none ms-3' href="https://x.com/">
                 <FontAwesomeIcon icon={faTwitter} />
               </a>
 
-              <a href="/">
+              <a target="_blank" className='text-light text-decoration-none ms-3' href="https://web.whatsapp.com/">
                 <FontAwesomeIcon icon={faWhatsapp} />
               </a>
 
-              <a href="/">
+              <a target="_blank" className='text-light text-decoration-none ms-3' href="https://www.instagram.com/?hl=en">
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
 
-              <a href="/">
+              <a target="_blank" className='text-light text-decoration-none ms-3' href="https://www.messenger.com/">
                 <FontAwesomeIcon icon={faEnvelope} />
               </a>
 
-              <a href="/">
+              <a target="_blank" className='text-light text-decoration-none ms-3' href="">
                 <FontAwesomeIcon icon={faPhone} />
               </a>
             </div>
