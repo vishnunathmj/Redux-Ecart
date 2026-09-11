@@ -11,6 +11,9 @@ import { searchProduct } from '../redux/slice/productSlice'
 function Header({insideHeader}) {
   const dispatch = useDispatch() 
   const userWishlist = useSelector(state=>state.wishlistReducer)
+  const userCart = useSelector(state=>state.cartReducer)
+  console.log(userCart);
+  
 
   return (
     <Navbar expand="lg" className="bg-primary fixed-top">
@@ -21,7 +24,7 @@ function Header({insideHeader}) {
           <Nav className="ms-auto">
           { insideHeader && <Nav.Item><input onChange={e=>dispatch(searchProduct(e.target.value))} type='text' className='form-control rounded' placeholder='Search the Products...'/></Nav.Item>}
           <Link to={'/wishlist'} className='text-light text-decoration-none fw-bold'><FontAwesomeIcon icon={faHeart} />Wishlist <Badge pill className='bg-secondary'>{userWishlist?.length}</Badge></Link>
-          <Link to={'/cart'} className='text-light text-decoration-none fw-bold'><FontAwesomeIcon icon={faCartShopping} />Cart <Badge pill className='bg-secondary'>10</Badge></Link>
+          <Link to={'/cart'} className='text-light text-decoration-none fw-bold'><FontAwesomeIcon icon={faCartShopping} />Cart <Badge pill className='bg-secondary'>{userCart?.length}</Badge></Link>
 
             {/* <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#link">Link</Nav.Link> */}
